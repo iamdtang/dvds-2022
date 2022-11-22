@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\DvdController@index');
+Route::get('/contact', 'App\Http\Controllers\ContactController@showForm');
+Route::post('/contact', 'App\Http\Controllers\ContactController@processForm');
+
