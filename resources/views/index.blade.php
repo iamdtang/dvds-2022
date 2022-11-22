@@ -7,6 +7,8 @@
   <title>DVDs</title>
 </head>
 <body>
+  <p>There are {{count($dvds)}} DVDs.</p>
+
   <table>
     <thead>
       <tr>
@@ -17,9 +19,13 @@
     </thead>
     <tbody>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        @foreach ($dvds as $dvd)
+          <tr>
+            <td>{{$dvd->title}}</td>
+            <td>{{$dvd->genre}}</td>
+            <td>{{$dvd->rating}}</td>
+          </tr>
+        @endforeach
       </tr>
     </tbody>
   </table>
